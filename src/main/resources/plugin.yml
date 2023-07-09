@@ -1,0 +1,4 @@
+name: ItemFactoryPlus
+version: '${version}'
+main: me.smodev.itemfactoryplus.ItemFactoryPlus
+api-version: '1.20'
