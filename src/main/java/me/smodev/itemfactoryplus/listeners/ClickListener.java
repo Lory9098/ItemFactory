@@ -10,7 +10,6 @@ public class ClickListener implements Listener {
     private final FactoryItem factoryItem;
 
     public ClickListener(FactoryItem factoryItem) {
-        System.out.println("Nuova istanza di ClickListener");
         this.factoryItem = factoryItem;
     }
 

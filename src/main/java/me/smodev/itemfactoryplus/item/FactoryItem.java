@@ -235,13 +235,13 @@ public class FactoryItem {
 
 
     public FactoryItem registerClickListener(JavaPlugin javaPlugin) {
-        if(clickListener != null) Bukkit.getPluginManager().registerEvents(new ClickListener(this), javaPlugin);
+        if(clickListener != null) Bukkit.getPluginManager().registerEvents(this.clickListener, javaPlugin);
         return this;
     }
 
 
     public FactoryItem registerInteractListener(JavaPlugin javaPlugin) {
-        if(clickListener != null) Bukkit.getPluginManager().registerEvents(new InteractListener(this), javaPlugin);
+        if(clickListener != null) Bukkit.getPluginManager().registerEvents(this.interactListener, javaPlugin);
         return this;
     }
 
