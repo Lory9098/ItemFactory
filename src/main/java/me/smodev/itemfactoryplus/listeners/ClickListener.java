@@ -10,8 +10,9 @@ public class ClickListener implements Listener {
     private final FactoryItem factoryItem;
 
     public ClickListener(FactoryItem factoryItem) {
-        System.out.println("Nuova istanza");
+        System.out.println("ClickListener constructor called");
         this.factoryItem = factoryItem;
+        System.out.println(factoryItem);
     }
 
     @EventHandler
