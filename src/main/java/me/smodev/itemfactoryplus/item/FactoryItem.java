@@ -33,7 +33,6 @@ public class FactoryItem {
 
     private ItemStack itemStack;
     private ItemMeta itemMeta;
-    private List<String> lore;
 
     private ItemClickHandler clickHandler;
     private ItemInteractHandler itemInteractHandler;
@@ -87,66 +86,66 @@ public class FactoryItem {
     }
 
     public FactoryItem addLore(String lore){
-        this.lore.add(ChatUtil.color(lore));
+        this.itemMeta.getLore().add(ChatUtil.color(lore));
         return this;
     }
 
     public FactoryItem addLore(List<String> lore){
-        this.lore.addAll(ChatUtil.color(lore));
+        this.itemMeta.getLore().addAll(ChatUtil.color(lore));
         return this;
     }
 
     public FactoryItem removeLore(String lore){
-        this.lore.remove(ChatUtil.color(lore));
+        this.itemMeta.getLore().remove(ChatUtil.color(lore));
         return this;
     }
 
     public FactoryItem removeLore(List<String> lore){
-        this.lore.removeAll(ChatUtil.color(lore));
+        this.itemMeta.getLore().removeAll(ChatUtil.color(lore));
         return this;
     }
 
     public FactoryItem clearLore(){
-        this.lore.clear();
+        this.itemMeta.getLore().clear();
         return this;
     }
 
     public FactoryItem setLoreLine(int line, String lore){
-        this.lore.set(line, ChatUtil.color(lore));
+        this.itemMeta.getLore().set(line, ChatUtil.color(lore));
         return this;
     }
 
     public FactoryItem addLoreLine(int line, String lore){
-        this.lore.add(line, ChatUtil.color(lore));
+        this.itemMeta.getLore().add(line, ChatUtil.color(lore));
         return this;
     }
 
     public FactoryItem removeLoreLine(int line){
-        this.lore.remove(line);
+        this.itemMeta.getLore().remove(line);
         return this;
     }
 
     public FactoryItem clearLoreLine(int line){
-        this.lore.set(line, "");
+        this.itemMeta.getLore().set(line, "");
         return this;
     }
 
     public FactoryItem clearLoreLines(int start, int end){
         for(int i = start; i < end; i++){
-            this.lore.set(i, "");
+            this.itemMeta.getLore().set(i, "");
         }
         return this;
     }
 
     public FactoryItem clearLoreLines(int start){
-        for(int i = start; i < this.lore.size(); i++){
-            this.lore.set(i, "");
+        for(int i = start; i < this.itemMeta.getLore().size(); i++){
+            this.itemMeta.getLore().set(i, "");
         }
         return this;
     }
 
     public List<String> getLore(){
-        return lore;
+        return itemMeta.getLore();
     }
 
     public FactoryItem setDurability(short durability){
@@ -253,7 +252,6 @@ public class FactoryItem {
 
 
     public ItemStack build() {
-        this.itemMeta.setLore(lore);
         this.itemStack.setItemMeta(this.itemMeta);
         return this.itemStack;
     }
