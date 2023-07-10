@@ -221,14 +221,18 @@ public class FactoryItem {
 
     public FactoryItem setActionWhenClick(ItemClickHandler clickHandler) {
         this.clickHandler = clickHandler;
-        if(this.clickListener == null) this.clickListener = new ClickListener(this);
+        if (clickListener == null) {
+            clickListener = new ClickListener(this);
+        }
 
         return this;
     }
 
     public FactoryItem setActionWhenInteract(ItemInteractHandler itemInteractHandler) {
         this.itemInteractHandler = itemInteractHandler;
-        if(this.interactListener == null) this.interactListener = new InteractListener(this);
+        if(interactListener == null){
+            interactListener = new InteractListener(this);
+        }
 
         return this;
     }
