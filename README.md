@@ -47,6 +47,8 @@ implementation 'com.github.Lory9098:ItemFactoryPlus:Tag'
 
 Maven:
 
+repositories:
+
 ```
 <repository>
   <id>jitpack.io</id>
