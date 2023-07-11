@@ -34,16 +34,34 @@ Andiamo a creare un nuovo oggetto ItemStack, che come valore avrà una nuova ist
 ```
 
 Gradle:
+
+repositories:
+
+```
+maven { url 'https://jitpack.io' }
+```
+dependencies
 ```
 implementation 'com.github.Lory9098:ItemFactoryPlus:Tag'
 ```
 
 Maven:
+
 ```
-<groupId>com.github.Lory9098</groupId>
-<artifactId>ItemFactoryPlus</artifactId>
-<version>Tag</version>
+<repository>
+  <id>jitpack.io</id>
+  <url>https://jitpack.io</url>
+</repository>
 ```
+dependencies
+```
+<dependency>
+  <groupId>com.github.User</groupId>
+  <artifactId>Repo</artifactId>
+  <version>Tag</version>
+</dependency>
+```
+
 
 
 
